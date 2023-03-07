@@ -1,0 +1,107 @@
+
+html body {
+    min-width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: rgba(231, 168, 104, 0.333);  
+}
+.fav_country {
+    text-align: center;
+}
+#pic {
+    height: 25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#pic img {
+    height: 24rem;
+    width: 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5px;
+    border-radius: 20px;
+}
+.btn_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    grid-gap: 2rem;
+    margin: 2rem;
+    min-height: 5rem;
+}
+button {
+    margin: 2rem left;
+    height: 5rem;
+    width: 20rem;
+    border-radius: 1rem;
+    border-color: bisque;
+    font-size: large;
+}
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
+}
+p {
+    margin: 2rem;
+    margin-right: 2rem;
+}
+.about {
+    display: grid;
+}
+@media screen and (max-width: 80rem) {
+    button {
+        height: 3rem;
+        width: 13rem;
+    }
+}
+@media screen and (max-width: 50rem) {
+    .about {
+        display: grid;
+        grid-template-columns: 15rem auto;
+        grid-template-rows: 20rem;
+    }
+    .btn_container{
+        grid-template-columns: 1fr;
+    }
+    .tab-btn 1 {
+        grid-row-start: 1;
+    }
+    .tab-btn 2 {
+        grid-row-start: 2; 
+    }
+    .tab-btn 3 {
+        grid-row-start: 3;
+    }    
+    .home-content  {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    .location-content{
+        grid-column-start: 2;
+        grid-row-start: 1;       
+    }
+    .history-content{
+        grid-column-start: 2;
+        grid-row-start: 1;       
+    }    
+    #pic, #pic img {
+        height: 16rem;
+    }
+}
+@media screen and (max-width: 35rem) {
+    button {
+        height: 2.5rem;
+        width: 5rem;
+    }  
+    .btn_container {
+        height: 7rem;
+        width: 6rem;
+    } 
+    .about {
+        grid-template-columns: 7rem auto;
+    }
+}
